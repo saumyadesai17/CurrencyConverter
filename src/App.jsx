@@ -20,7 +20,10 @@ function App() {
     setAmount(convertedAmount);
   }
 
-  const convert = () => setConvertedAmount(amount * currencyInfo[to])
+  const convert = () => {
+    const calculation = amount * currencyInfo[to];
+    setConvertedAmount(parseFloat(calculation.toFixed(2))); 
+  }
 
   useEffect(()=>{
   }, [])
